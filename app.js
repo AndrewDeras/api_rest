@@ -7,6 +7,8 @@ import './src/database';
 import express from 'express';
 import homeRoutes from './src/routes/homeRoutes';
 import userRoutes from './src/routes/userRoutes';
+import alunosRoutes from './src/routes/alunosRouter';
+import photoRoutes from './src/routes/photoRoutes';
 import tokenRoutes from './src/routes/tokenRoutes';
 
 class App {
@@ -25,6 +27,8 @@ class App {
     this.app.use('/', homeRoutes);
     this.app.use('/users/', userRoutes);
     this.app.use('/tokens/', tokenRoutes);
+    this.app.use('/alunos/', alunosRoutes);
+    this.app.use('/photos/', photoRoutes);
   }
 }
 

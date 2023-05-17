@@ -10,7 +10,7 @@ const router = new Router();
 
 // não precisaria em um sistema
 // router.get('/id', loginRequired, userController.show); // Lista um usuário
-router.get('/', loginRequired, userController.index); // Lista de usuários
+// router.get('/', loginRequired, userController.index); // Lista de usuários
 
 router.post('/', userController.store);
 router.put('/', loginRequired, userController.update);

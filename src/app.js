@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import { resolve } from 'path';
 import cors from 'cors';
 import helmet from 'helmet';
+import delay from 'express-delay';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ class App {
   }
 
   middlewares() {
+    this.app.use(delay(1500, 2500));
     this.app.use(cors());
     this.app.use(helmet({ crossOriginEmbedderPolicy: false }));
     this.app.use(express.urlencoded({ extended: true }));

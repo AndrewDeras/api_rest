@@ -23,7 +23,7 @@ class App {
   }
 
   middlewares() {
-    this.app.use(_expressdelay2.default.call(void 0, 2000));
+    this.app.use(_expressdelay2.default.call(void 0, 1000));
     this.app.use(_cors2.default.call(void 0, ));
     this.app.use(_helmet2.default.call(void 0, { crossOriginEmbedderPolicy: false }));
     this.app.use(_express2.default.urlencoded({ extended: true }));

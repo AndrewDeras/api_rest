@@ -23,7 +23,7 @@ class App {
   }
 
   middlewares() {
-    this.app.use(delay(2000));
+    this.app.use(delay(1000));
     this.app.use(cors());
     this.app.use(helmet({ crossOriginEmbedderPolicy: false }));
     this.app.use(express.urlencoded({ extended: true }));

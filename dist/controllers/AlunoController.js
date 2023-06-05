@@ -36,7 +36,7 @@ class AlunoController {
       }
 
       const aluno = await _AlunoModel2.default.findByPk(id, {
-        attributes: ['id', 'nome', 'idade', 'email'],
+        attributes: ['id', 'nome', 'sobrenome', 'idade', 'email', 'peso', 'altura'],
         order: [['id', 'DESC'], [_PhotoModel2.default, 'id', 'DESC']],
         include: {
           model: _PhotoModel2.default,
